@@ -3,7 +3,7 @@ const callBack = (entries) => {
   for (let i = 0; i < entries.length; i++) {
     if (entries[i].isIntersecting) {
       console.log(entries[i].target.classList[1])
-      entries[i].target.classList.toggle("in");
+      entries[i].target.classList.toggle("red");
     }
   }
 }

@@ -5,7 +5,11 @@
 * 1025px — 1200px: Desktops, large screens
 * 1201px and more —  Extra large screens, TV 
 */
+/* little reset */
 
+ul {
+  margin:0;
+}
 @font-face {
   font-family: 'Open Sans';
   src: url(fonts/OpenSans-Regular.ttf);
@@ -19,41 +23,41 @@ html {
   font-family: 'Open Sans';
 }
 
-.flx-row {
+.flex-row {
   border: 1px solid black;
   display: flex;
   margin: 0 auto;
   /* align-items: center; */
 }
 
-.flx-row>.flx-item {
+.flex-row>.flex-item {
   flex-grow: 1;
 }
 
 
 @media only screen and (min-width: 1201px) {
-  .flx-row {
+  .flex-row {
     max-width: 1400px;
     width: 100%;
   }
 } 
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
-  .flx-row {
+  .flex-row {
     max-width: 1200px;
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .flx-row {
+  .flex-row {
     max-width: 1024px;
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .flx-row {
+  .flex-row {
     max-width: 768px;
     width: 100%;
     flex-direction: column;
@@ -61,7 +65,7 @@ html {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px){
-  .flx-row {
+  .flex-row {
     max-width: 480px;
     width: 100%;
     flex-direction: column;
