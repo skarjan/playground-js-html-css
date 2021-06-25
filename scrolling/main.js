@@ -1,12 +1,22 @@
-const callback = function(entries) {
-  entries.forEach(entry => {
-    entry.target.classList.toggle("lone-ease");
-  });
-};
+const callBack = (entries) => {
 
-const observer = new IntersectionObserver(callback);
+  for (let i = 0; i < entries.length; i++) {
+    if (entries[i].isIntersecting) {
+      console.log(entries[i].target.classList[1])
+      entries[i].target.classList.toggle("in");
+    }
+  }
+}
+
+const observer = new IntersectionObserver(callBack);
 
 const targets = document.querySelectorAll(".round-box");
-targets.forEach(function(target) {
-  observer.observe(target);
-});
+
+
+for (let i = 0; i < targets.length; i++) {
+  observer.observe(targets[i]);
+}
+
+const isInView = (element) => {
+    element.classList
+}

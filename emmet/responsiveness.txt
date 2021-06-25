@@ -28,7 +28,7 @@ margin: 0 2px;
 
 Tablets
 width: 768px;
-Columns: 12
+Columns: 8
 Column width: 82px;
 Gutters: 16px;
 
