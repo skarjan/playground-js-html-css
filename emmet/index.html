@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,59 +8,69 @@
   <title>CSS</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-<div class="flex-row">
-  <div class="flex-item">
-    <div class="frame">
-      <header class="heading">
-        <h1>This will be a collection...</h1>
-        <p>...of different components en random stuff</p>
-      </header>
+
+  <div class="container">
+    <div class="flex-row">
+
+      <div class="flex-item col-12 bg-3">
+        <div class="heading">
+          <h1>Welcome to flexGRID!</h1>
+          <button type="button" class="bttn bttn-one">First style</button>
+          <button class="bttn bttn-two">Second style</button>
+          <button class="bttn bttn-three">Third style</button>
+        </div>
+
+      </div>
     </div>
-  </div>
-  <div class="flex-item">
-    <div class="frame">
-      <header class="heading">
-        <h1>This will be a collection...</h1>
-        <p>...of different components en random stuff</p>
-      </header>
+
+    <div class="flex-row">
+
+      <div class="flex-item bg-1 cl-4 cl-6-m cl-12-s">
+        <header class="heading">
+          <h1>This is a h1 heading...</h1>
+        </header>
+        <p>cl-4 cl-6-m cl-12-s</p>
+      </div>
+
+      <div class="flex-item bg-2 cl-4 cl-6-m cl-12-s">
+        <header class="heading">
+          <h2>These are headers in descending order</h2>
+        </header>
+        <p>cl-4 cl-6-m cl-12-s</p>
+      </div>
+
+      <div class="flex-item bg-3 cl-4 cl-6-m cl-12-s">
+        <header class="heading">
+          <h3>A slightly less important header</h3>
+        </header>
+        <p>cl-4 cl-6-m cl-12-s</p>
+      </div>
+
     </div>
-  </div>
-  <div class="flex-item">
-    <header class="heading">
-      <h2>A slightly less important header</h2>
-      <p>Lets flex it around</p>
-    </header>
-  </div>
-  <div class="flex-item">
-    <header class="heading">
-      <h2>Some content</h2>
-      <p>Some more...</p>
-    </header>
-  </div>
-</div>
-<div class="flex-row">
-  <div class="flex-item">
-    <header class="heading">
-      <h3>Title</h3>
-      <ul>
-        <li>List item1</li>
-        <li>List item2</li>
-        <li>List item3</li>
-        <li>List item4</li>
-        <li>List item5</li>
-        <li>List item6</li>
-        <li>List item7</li>
-        <li>List item8</li>
-      </ul>
-    </header>
-  </div>
-</div>
 
+    <div class="flex-row">
 
+      <div class="flex-item bg-4 cl-4 cl-6-m  cl-12-s">
+        <header class="heading">
+          <h4>Some content</h4>
+        </header>
+        <p>Some more...</p>
+      </div>
 
+      <div class="flex-item cl-6  bg-1">
+        <header>
+          <h3>Yet another title</h3>
+          <p>With some text</p>
+        </header>
+      </div>
+
+    </div>
+
+  </div>
 
   <script src="main.js"></script>
 </body>
+
 </html>
