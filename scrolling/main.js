@@ -24,9 +24,10 @@ const callBack = (entries) => {
   for (let i = 0; i < entries.length; i++) {
 
     console.log(entries[i].intersectionRatio);
-    if (entries[i].intersectionRatio > 0.5) {
+    if (entries[i].intersectionRatio > 1) {
 
-      entries[i].target.classList.toggle("offset");
+      entries[i].target.classList.remove("offset");
+      entries[i].target.classList.add("onset");
     }
   }
 

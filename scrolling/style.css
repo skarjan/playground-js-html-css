@@ -25,13 +25,19 @@ body {
   margin: 1rem;
   border-radius: 10px;
   box-shadow: 5px 5px 24px 0px #0000004b;
-  position: relative;
-  opacity: 1;
+
+  
 }
 .offset {
   position: relative;
   left: 10%;
   transition: left 1s ease;
+}
+.onset {
+  position: relative;
+  left:0;
+  transition: left 1s ease;
+
 }
 
 .out {
