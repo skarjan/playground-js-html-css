@@ -1,22 +1,50 @@
-const callBack = (entries) => {
+function isState(entries, state, index) {
 
-  for (let i = 0; i < entries.length; i++) {
-    if (entries[i].isIntersecting) {
-      console.log(entries[i].target.classList[1])
-      entries[i].target.classList.toggle("red");
+  if (entries[index].target.classList.length > 0) {
+
+    for (let i = 0; i < entries[index].target.classList.length; i++) {
+
+      if (entries[index].target.classList[i] === state) {
+
+        console.log(true);
+        return true;
+      }
     }
   }
 }
 
-const observer = new IntersectionObserver(callBack);
 
-const targets = document.querySelectorAll(".round-box");
+function isOffset(entries, index) {
+
+  isState(entries, "offset", index)
+}
+
+const callBack = (entries) => {
+
+  for (let i = 0; i < entries.length; i++) {
+
+    console.log(entries[i].intersectionRatio);
+    if (entries[i].intersectionRatio > 0.5) {
+
+      entries[i].target.classList.toggle("offset");
+    }
+  }
+
+  // console.log(entries[i].target.classList);
+}
+
+
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1
+};
+const observer = new IntersectionObserver(callBack, options);
+
+const targets = document.querySelectorAll(".offset");
 
 
 for (let i = 0; i < targets.length; i++) {
   observer.observe(targets[i]);
 }
 
-const isInView = (element) => {
-    element.classList
-}

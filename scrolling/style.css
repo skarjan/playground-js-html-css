@@ -28,6 +28,11 @@ body {
   position: relative;
   opacity: 1;
 }
+.offset {
+  position: relative;
+  left: 10%;
+  transition: left 1s ease;
+}
 
 .out {
   opacity: 0;
