@@ -1,0 +1,43 @@
+1201px and more —  Extra large screens, TV
+1025px — 1200px: Desktops, large screens
+769px — 1024px: Small screens, laptops
+481px — 768px: iPads, Tablets
+320px — 480px: Mobile devices
+
+Common breakpoints as specified by FreeCodeCamp
+
+Using a grid system. I could use the following specifications to build a layout.
+
+Desktops, large screen:
+width: 1196px;
+Columns: 12
+Column width: 85px;
+Gutters: 16px;
+
+Optional: 
+margin: 0 2px;
+
+Small screens, laptops:
+width: 1024px;
+Columns: 12
+Column width: 85px;
+Gutters: 16px;
+
+Optional:
+margin: 0 2px;
+
+Tablets
+width: 768px;
+Columns: 12
+Column width: 82px;
+Gutters: 16px;
+
+
+Mobile devices:
+width: 480px;
+Columns: 4;
+Column width: 32px;
+Gutters: 8px;
+
+Optional: 
+margin: 0 4px;
