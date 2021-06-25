@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(OpenSans-Regular.ttf);
+  src: url(fonts/OpenSans-Regular.ttf);
 }
 
 /* * {
@@ -20,18 +20,16 @@ html {
 }
 
 .flx-row {
+  border: 1px solid black;
   display: flex;
   margin: 0 auto;
   /* align-items: center; */
 }
 
 .flx-row>.flx-item {
-  margin: 0 auto;
+  flex-grow: 1;
 }
 
-.flx-item {
-
-}
 
 @media only screen and (min-width: 1201px) {
   .flx-row {
