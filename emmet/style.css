@@ -119,11 +119,12 @@ html {
   padding-right: 12px;
   padding-left: 12px;
 }
+
 .header-main {
- display:flex;
- flex-direction: column;
- align-items: center;
- padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
 /* end of classes */
@@ -148,28 +149,35 @@ html {
 .bg-4 {
   background-color: #74c69d;
 }
+
 /* theme 2 holypgrail */
+
 .bcg-1 {
   background-color: #BCD39C;
 }
+
 .bcg-2 {
   background-color: #D1CCDC;
 }
+
 .bcg-3 {
   background-color: #EAFDCF;
 }
+
 .bcg-4 {
   background-color: #FFFC99;
 }
+
 .bcg-5 {
   background-color: #8E8358;
   color: #fff;
 }
+
 /* end of background colors */
 
 
 
-/* column span width */
+/* columns */
 
 .cl-1 {
   width: 7.28%;
@@ -220,6 +228,10 @@ html {
   width: 88.37%
 }
 
+/* end of columns */
+
+
+
 /* buttons */
 
 .bttn {
@@ -230,7 +242,7 @@ html {
   margin: .25rem;
   border: 1px solid #fff;
   border-radius: 3px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .bttn:hover {
@@ -244,6 +256,7 @@ html {
   border-color: #2D6A4F;
   color: #fff
 }
+
 .bttn-one:hover {
   background-color: #1B4332;
   border-color: #1B4332;
@@ -255,21 +268,29 @@ html {
   border-color: #218197;
   color: #fff
 }
+
 .bttn-two:hover {
   background-color: #165664;
   border-color: #165664;
   color: #fff
 }
+
 .bttn-three {
   background-color: #934D83;
   border-color: #934D83;
   color: #fff
 }
+
 .bttn-three:hover {
   background-color: #6B385F;
   border-color: #6B385F;
   color: #fff
 }
+
+/* end of buttons */
+
+
+
 /* responsiveness */
 
 @media only screen and (min-width: 1201px) {
@@ -284,12 +305,14 @@ html {
     max-width: 1200px;
     width: 100%;
   }
+
   .row>.column {
     padding-top: 16px;
     padding-bottom: 16px;
     padding-right: 8px;
     padding-left: 8px;
   }
+
   /* max width is 1200px(100%) - 176px(14.66%) = 85.34%*/
   .l-12 {
     width: 85.34%;
@@ -301,12 +324,14 @@ html {
     max-width: 1024px;
     width: 100%;
   }
+
   .row>.column {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 4px;
     padding-left: 4px;
   }
+
   /* max width is 1024px(100%) - 176px(17.18%) = 82.82%*/
   .m-12 {
     width: 82.82%;
@@ -324,15 +349,17 @@ html {
   }
 
   /* max width is 768px(100%) - 112px(14.58) = 85.42%*/
-  .s-12{
+  .s-12 {
     width: 100%;
   }
+
   .row>.column {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 4px;
     padding-left: 4px;
   }
+
   .s-6 {
     width: 50%;
   }
@@ -343,12 +370,14 @@ html {
     max-width: 480px;
     width: 100%;
   }
+
   .row>.column {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 2px;
     padding-left: 2px;
   }
+
   /* max width is 480px(100%) - 48(10%) = 90%*/
   .xs-12 {
     width: 90%;
