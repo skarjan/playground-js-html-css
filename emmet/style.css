@@ -90,12 +90,12 @@ html {
 }
 
 /* classes */
+
 .container {
   margin: 0 auto;
 }
 
 .row {
-  /* border: 1px solid black; */
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -117,7 +117,13 @@ html {
  align-items: center;
  padding: 2rem;
 }
+
+/* end of classes */
+
+
+
 /* background colors */
+
 .bg-1 {
   background-color: #d8f3dc;
 
