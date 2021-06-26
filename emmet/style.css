@@ -139,7 +139,7 @@ html {
 
 
 
-/* background colors */
+/*  colors */
 
 .bg-1 {
   background-color: #d8f3dc;
@@ -187,52 +187,52 @@ html {
 
 /* columns */
 
-.cl-1 {
+.xl-1 {
   width: 7.28%;
 }
 
-.cl-2 {
+.xl-2 {
   width: 14.57%;
 }
 
-.cl-3 {
+.xl-3 {
   width: 21.85%;
 }
 
-.cl-4 {
+.xl-4 {
   width: 29.13%;
 
 }
 
-.cl-5 {
+.xl-5 {
   width: 36.41%;
 }
 
-.cl-6 {
+.xl-6 {
   width: 43.69%;
 }
 
-.cl-7 {
+.xl-7 {
   width: 50.97%;
 }
 
-.cl-8 {
+.xl-8 {
   width: 58.25%;
 }
 
-.cl-9 {
+.xl-9 {
   width: 66.53%;
 }
 
-.cl-10 {
+.xl-10 {
   width: 73.81%;
 }
 
-.cl-11 {
+.xl-11 {
   width: 81.09%;
 }
 
-.cl-12 {
+.xl-12 {
   width: 88.37%
 }
 

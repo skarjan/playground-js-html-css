@@ -1,0 +1,19 @@
+.fg-header-img {
+  width: 350px;
+}
+.fg-display-1 {
+  font-size: 5rem;
+}
+
+pre {
+  background-color: #282C34;
+  color:white;
+  padding:1rem;
+}
+
+.color-1 {
+  background-color: #DCE2E5;
+  border: 1px solid #95A7B2;
+  border-radius:3px;
+  padding: 16px 12px
+}
