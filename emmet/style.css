@@ -111,7 +111,7 @@ html {
   padding-right: 12px;
   padding-left: 12px;
 }
-header {
+.header-main {
  display:flex;
  flex-direction: column;
  align-items: center;
