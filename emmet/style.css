@@ -94,18 +94,18 @@ html {
   margin: 0 auto;
 }
 
-.flex-row {
+.row {
   /* border: 1px solid black; */
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
-.flex-row>.flex-item {
+.row>.column {
   flex-grow: 1;
 }
 
-.flex-row>.flex-item {
+.row>.column {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: 12px;
@@ -246,14 +246,14 @@ html {
     max-width: 1200px;
     width: 100%;
   }
-  .flex-row>.flex-item {
+  .row>.column {
     padding-top: 16px;
     padding-bottom: 16px;
     padding-right: 8px;
     padding-left: 8px;
   }
   /* max width is 1200px(100%) - 176px(14.66%) = 85.34%*/
-  .cl-12-l {
+  .l-12 {
     width: 85.34%;
   }
 }
@@ -263,18 +263,18 @@ html {
     max-width: 1024px;
     width: 100%;
   }
-  .flex-row>.flex-item {
+  .row>.column {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 4px;
     padding-left: 4px;
   }
   /* max width is 1024px(100%) - 176px(17.18%) = 82.82%*/
-  .cl-12-m {
+  .m-12 {
     width: 82.82%;
   }
 
-  .cl-6-m {
+  .m-6 {
     width: 41.41%;
   }
 }
@@ -286,16 +286,16 @@ html {
   }
 
   /* max width is 768px(100%) - 112px(14.58) = 85.42%*/
-  .cl-12-s {
+  .s-12{
     width: 100%;
   }
-  .flex-row>.flex-item {
+  .row>.column {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 4px;
     padding-left: 4px;
   }
-  .cl-6-s {
+  .s-6 {
     width: 50%;
   }
 }
@@ -305,14 +305,14 @@ html {
     max-width: 480px;
     width: 100%;
   }
-  .flex-row>.flex-item {
+  .row>.column {
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 2px;
     padding-left: 2px;
   }
   /* max width is 480px(100%) - 48(10%) = 90%*/
-  .cl-12-xs {
+  .xs-12 {
     width: 90%;
   }
 }
