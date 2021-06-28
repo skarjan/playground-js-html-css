@@ -31,10 +31,14 @@
 
 
         <h3>Use</h3>
-        <p>FullGrid works by using 5 different screen sizes. These are extra large, large, medium, small and extra
-          small. Each screen size is proportionally divided by 12 columns.
-          Any number of columns works as long is it doesn't exceed 12.
+        <p>FullGrid works by using 5 different screen sizes. These are extra large (1400px), large (1200px),
+          medium(1024px), small(768px) and extra
+          small (480px). Each screen size is made up of elements amounting to a total column width of 12. This could be
+          1 element that is 12 columns wide,
+          or this could be 12 elements, each 1 column wide. Any combination of elements which add up to a column width
+          of 12 will work.
         </p>
+        <strong>12 elements, 1 column wide:</strong>
         <div class="row">
           <div class="column cl-1">
             <div class="color-1"></div>
@@ -82,6 +86,7 @@
             <div class="color-1"></div>
           </div>
         </div>
+        <strong>6 elements, 2 columns wide:</strong>
         <div class="row">
           <div class="column cl-2">
             <div class="color-1"></div>
@@ -105,7 +110,9 @@
             <div class="color-1"></div>
           </div>
         </div>
-
+        <div class="row">
+          <div class="column xl-12 no-pad"><strong>4 elements, 3 columns wide:</strong></div>
+        </div>
         <div class="row">
 
           <div class="column cl-3">
@@ -121,8 +128,12 @@
             <div class="color-1"></div>
           </div>
         </div>
+<div class="row">
+  <div class="column xl-12">
+    <strong>3 elements, 4 columns wide:</strong>
 
-
+  </div>
+</div>
         <div class="row">
           <div class="column cl-4">
             <div class="color-1"></div>

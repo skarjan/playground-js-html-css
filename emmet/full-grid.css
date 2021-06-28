@@ -17,3 +17,6 @@ pre {
   border-radius:3px;
   padding: 16px 12px
 }
+.no-pad {
+  padding: 0 12px!important;
+}
