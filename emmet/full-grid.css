@@ -22,5 +22,8 @@ pre {
   color: #499CD6;
 }
 .code--html--class {
-  color: #34b302;
+  color: #9CDCFE;
+}
+.code--html--class--content {
+  color: #CE916A;
 }
