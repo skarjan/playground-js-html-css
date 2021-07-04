@@ -85,7 +85,10 @@ h6 {
   font-family: 'Open Sans';
   src: url(fonts/OpenSans-Regular.ttf);
 }
-
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(fonts/IBMPlexMono-Regular.ttf);
+}
 /* end of fonts */
 
 
@@ -96,6 +99,9 @@ html {
   font-size: 16px;
   font-family: 'Open Sans';
   overflow-wrap:break-word;
+}
+pre {
+  font-family: 'IBM Plex Mono'
 }
 
 /*  end of element styles */

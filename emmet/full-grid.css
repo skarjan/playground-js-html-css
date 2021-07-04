@@ -18,12 +18,15 @@ pre {
   border-radius:3px;
   padding: 16px 12px
 }
+.code {
+  line-height: 1.4;
+}
 .code--html {
   color: #499CD6;
 }
 .code--html--class {
   color: #9CDCFE;
 }
-.code--html--class--content {
+.code--html--class--name {
   color: #CE916A;
 }

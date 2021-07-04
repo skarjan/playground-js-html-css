@@ -6,22 +6,16 @@ const trace = (msg) => {
 let pre = document.getElementsByTagName("pre");
 let preSplit = pre[0].innerHTML.split("\n");
 
+let classAttrReg = /#([\w]+)#/
+let classAttrSpan =   `<span class="code--html--class">$1</span>`
 
-
-
-lessThen = `&lt;`
-greaterThen = `&gt;`
-
-let classAttrReg = /(\s)(class)(=)/gm;
-let classAttrSpan =   `$1<span class="code--html--class">$2</span>$3`;
-
-let classNameReg = /(\^)([\w\W\s]+)(\^)/
-let classNameSpan = `$2`
+let propNameReg = /\^[\w\W\s]+\^/
+let propNameSpan = `<span class="code--html--class--name">$&</span>`
 
 let doubleQuotesReg = /\^/gm;
 
-let HTMLTagsReg = /(^!)([\w\W\s]+)(!!$)/;
-let HTMLTagsSpan = `&lt;$2</span>&gt;`;
+let LtAndGtReg = /(^!)([\w\W\s]+)(!!$)/;
+let LtAndGtSpan = `&lt;$2</span>&gt;`;
 
 let HTMLElementReg = /(&lt;)\/*(div)/
 let HTMLElementSpan = `$1<span class="code--html">$2</span>`
@@ -29,8 +23,14 @@ let HTMLElementSpan = `$1<span class="code--html">$2</span>`
 
 // style class attribute
 for (let i = 0; i < preSplit.length; i++) {
-  if (classNameReg.test(preSplit[i])) {
-    preSplit[i] = preSplit[i].replace(classNameReg, classNameSpan);
+  if (propNameReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(propNameReg, propNameSpan);
+  }
+  if (LtAndGtReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(LtAndGtReg, LtAndGtSpan);
+  }
+  if (HTMLElementReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(HTMLElementReg, HTMLElementSpan);
   }
   if (classAttrReg.test(preSplit[i])) {
     preSplit[i] = preSplit[i].replace(classAttrReg, classAttrSpan);
@@ -38,13 +38,9 @@ for (let i = 0; i < preSplit.length; i++) {
   if (doubleQuotesReg.test(preSplit[i])) {
     preSplit[i] = preSplit[i].replace(doubleQuotesReg, "\"");
   }
-  if (HTMLTagsReg.test(preSplit[i])) {
-    preSplit[i] = preSplit[i].replace(HTMLTagsReg, HTMLTagsSpan);
-  }
-  if (HTMLElementReg.test(preSplit[i])) {
-    preSplit[i] = preSplit[i].replace(HTMLElementReg, HTMLElementSpan);
-  }
 }
+trace(preSplit);  
+
 
 pre[0].innerHTML=preSplit.join("\n");
 
