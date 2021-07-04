@@ -159,17 +159,28 @@
           all 5 breakpoints.
         </p>
         <code>
-          <!--  < = &#60; > = &#62; " = &#34;-->
+          <!--  < = &lt; > = &gt; " = &#34;-->
           <pre>
-&#60;div class="container"&#62;
-  &#60;div class="row"&#62;
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
 
-    &#60;div class="column xl-12 l-12 m-12 s-12 xs-12"&#62;
-     &#60;/div&#62;  
+    &lt;div class=&quot;column xl-12 l-12 m-12 s-12 xs-12&quot;&gt;
+     &lt;/div&gt;  
 
-  &#60;/div&#62;
-&#60;/div&#62;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 </pre>
+<p>
+  !div class=$container$!
+    !div class=$row$!
+  
+      !div class=$column xl-12 l-12 m-12 s-12 xs-12$!
+       !/div!
+  
+    !/div!
+  !/div!
+</p>
         </code>
         Turns into:
 

@@ -17,3 +17,6 @@ pre {
   border-radius:3px;
   padding: 16px 12px
 }
+.code-tag {
+  color: #ff1500;
+}
