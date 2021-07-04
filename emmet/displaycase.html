@@ -32,9 +32,15 @@
 
         <h3>Use</h3>
         <p>FullGrid works by using 5 different screen sizes. These are extra large, large, medium, small and extra
-          small. Each screen size is proportionally divided by 12 columns.
-          Any number of columns works as long is it doesn't exceed 12.
+          small. Each screen size is proportionally divided into 12 columns. To make a layout we have to specify a
+          number of columns along with the column width.
+          In the example below, the first row has 12 columns with a width of 1 column. The second row has 6 columns,
+          each with the width of 2 columns. This continues until the 6th and final row. Where it's just 1 column
+          that is 12 columns wide.
         </p>
+        <p>To summize: first specify the number of columns. Which can be 1 and 12, or any number in between.
+          Secondly, specify the width of each column. Which always adds up to 12 in total. 
+        </p> 
         <div class="row">
           <div class="column cl-1">
             <div class="color-1"></div>
@@ -171,16 +177,16 @@
 &lt;/div&gt;
 
 </pre>
-<p>
-  !div class=$container$!
-    !div class=$row$!
-  
-      !div class=$column xl-12 l-12 m-12 s-12 xs-12$!
-       !/div!
-  
-    !/div!
-  !/div!
-</p>
+          <!-- <p>
+            !div class=$container$!
+            !div class=$row$!
+
+            !div class=$column xl-12 l-12 m-12 s-12 xs-12$!
+            !/div!
+
+            !/div!
+            !/div!
+          </p> -->
         </code>
         Turns into:
 
