@@ -4,25 +4,59 @@ const trace = (msg) => {
 
 // https://entitycode.com/
 let pre = document.getElementsByTagName("pre");
-
-// let isCodeIdentity = /^&[\w\W]*;$/gm;
-let groupCI = /^&[\w]+;([\w\W]+)&[\w]+;$/
-
-
-let divEl =  /div/gm;
-let htmlTagSpan =   `<span class="code--html">$&</span>`;
-
-let classSelect = /(class)(=)("[\w]*")/g
-let classSelectSpan=   `<span class="code--html--class">$1</span>$2<span class="code--html--class--content">$3</span>`;
+let preSplit = pre[0].innerHTML.split("\n");
 
 
 
 
-// style classes first, 
-// because this function itself adds classes which would also be styled
-// pre[0].innerHTML = pre[0].innerHTML.replace(classSelect,classSelectSpan);
+lessThen = `&lt;`
+greaterThen = `&gt;`
 
-// pre[0].innerHTML = pre[0].innerHTML.replace(divEl,htmlTagSpan);
-pre[0].innerHTML = pre[0].innerHTML.replace(classSelect, classSelectSpan);
-trace(pre[0].innerHTML);
-// trace(pre[0].innerHTML.replace(divEl,htmlTagSpan));
+let classAttrReg = /(\s)(class)(=)/gm;
+let classAttrSpan =   `$1<span class="code--html--class">$2</span>$3`;
+
+let classNameReg = /(\^)([\w\W\s]+)(\^)/
+let classNameSpan = `$2`
+
+let doubleQuotesReg = /\^/gm;
+
+let HTMLTagsReg = /(^!)([\w\W\s]+)(!!$)/;
+let HTMLTagsSpan = `&lt;$2</span>&gt;`;
+
+let HTMLElementReg = /(&lt;)\/*(div)/
+let HTMLElementSpan = `$1<span class="code--html">$2</span>`
+
+
+// style class attribute
+for (let i = 0; i < preSplit.length; i++) {
+  if (classNameReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(classNameReg, classNameSpan);
+  }
+  if (classAttrReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(classAttrReg, classAttrSpan);
+  }
+  if (doubleQuotesReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(doubleQuotesReg, "\"");
+  }
+  if (HTMLTagsReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(HTMLTagsReg, HTMLTagsSpan);
+  }
+  if (HTMLElementReg.test(preSplit[i])) {
+    preSplit[i] = preSplit[i].replace(HTMLElementReg, HTMLElementSpan);
+  }
+}
+
+pre[0].innerHTML=preSplit.join("\n");
+
+
+
+
+
+
+
+// let classSelect = /(class)(=)("[\w]*")/g
+// let classSelectSpan=   `<span class="code--html--class">$1</span>$2<span class="code--html--class--content">$3</span>`;
+
+
+
+
