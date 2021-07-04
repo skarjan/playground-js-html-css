@@ -3,15 +3,14 @@ const trace = (msg) => {
 }
 
 // https://entitycode.com/
-// class name code?
-// code -> turn into pre tag with the tags in spans for colors
-let p = document.getElementsByTagName("pre");
-// should return a match if starts with '&', 
-// ends on ';' and has 0 or more characters in between
-let isCodeIdentity = /^&[\w\W]*;$/gm;
-let groupCI = /^&[\w]+;([\w\W]+)&[\w]+;$/
-let d =  /div/gm;
-let e =   `<span class="code-tag">$&</span>`
+let pre = document.getElementsByTagName("pre");
 
-trace(p[0].innerHTML.replace(d,e));
- p[0].innerHTML = p[0].innerHTML.replace(d,e);
+// let isCodeIdentity = /^&[\w\W]*;$/gm;
+let groupCI = /^&[\w]+;([\w\W]+)&[\w]+;$/
+
+
+let div =  /div/gm;
+let htmlTagSpan =   `<span class="code--html">$&</span>`
+
+trace(pre[0].innerHTML.replace(div,htmlTagSpan));
+ pre[0].innerHTML = pre[0].innerHTML.replace(div,htmlTagSpan);

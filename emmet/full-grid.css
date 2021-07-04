@@ -18,6 +18,9 @@ pre {
   border-radius:3px;
   padding: 16px 12px
 }
-.code-tag {
-  color: #ff1500;
+.code--html {
+  color: #499CD6;
+}
+.code--html--class {
+  color: #34b302;
 }
